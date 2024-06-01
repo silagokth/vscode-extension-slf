@@ -4,6 +4,10 @@
   "description": "Syntax Highlight for SiLago Language Family",
   "version": "0.0.1",
   "publisher": "SiLago",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silagokth/vscode-extension-slf.git"
+  },
   "icon": "assets/logo.png",
   "engines": {
     "vscode": "^1.88.0"
