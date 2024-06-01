@@ -1,0 +1,68 @@
+{
+  "name": "silago-language-family",
+  "displayName": "SiLago Language Family",
+  "description": "Syntax Highlight for SiLago Language Family",
+  "version": "0.0.1",
+  "publisher": "SiLago",
+  "icon": "assets/logo.png",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pasm",
+        "aliases": [
+          "VS-PASM",
+          "pasm"
+        ],
+        "extensions": [
+          ".pasm"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "cstr",
+        "aliases": [
+          "VS-CSTR",
+          "cstr"
+        ],
+        "extensions": [
+          ".cstr"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "asm",
+        "aliases": [
+          "VS-ASM",
+          "asm"
+        ],
+        "extensions": [
+          ".asm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pasm",
+        "scopeName": "source.pasm",
+        "path": "./syntaxes/pasm.tmLanguage.json"
+      },
+      {
+        "language": "cstr",
+        "scopeName": "source.cstr",
+        "path": "./syntaxes/cstr.tmLanguage.json"
+      },
+      {
+        "language": "asm",
+        "scopeName": "source.asm",
+        "path": "./syntaxes/asm.tmLanguage.json"
+      }
+    ]
+  }
+}

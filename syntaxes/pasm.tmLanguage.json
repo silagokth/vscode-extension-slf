@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "VS-PASM",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords-ctrl"
+    },
+    {
+      "include": "#keywords-operator"
+    },
+    {
+      "include": "#labels"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "keywords-ctrl": {
+      "patterns": [
+        {
+          "name": "markup.bold",
+          "match": "\\b(loop|cond|epoch|cell|cop|rop|raw)\\b"
+        }
+      ]
+    },
+    "keywords-operator": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "\\b(wait|act|calc|looph|loopt|condh|condt|brn|rep|repx|mask|fsm|dpu|swb|route|dsu|halt)\\b"
+        }
+      ]
+    },
+    "labels": {
+      "patterns": [
+        {
+          "name": "entity.name.tag",
+          "match": "<[^>]*>"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.pasm"
+}

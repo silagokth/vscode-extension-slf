@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "VS-ASM",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords-ctrl"
+    },
+    {
+      "include": "#keywords-operator"
+    },
+    {
+      "include": "#labels"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "keywords-ctrl": {
+      "patterns": [
+        {
+          "name": "markup.bold",
+          "match": "^\\b(cell)\\b"
+        }
+      ]
+    },
+    "keywords-operator": {
+      "patterns": [
+        {
+          "name": "keyword.control",
+          "match": "\\b(wait|act|calc|brn|rep|repx|mask|fsm|dpu|swb|route|dsu|halt)\\b"
+        }
+      ]
+    },
+    "labels": {
+      "patterns": [
+        {
+          "name": "entity.name.tag",
+          "match": "<[^>]*>"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.asm"
+}
